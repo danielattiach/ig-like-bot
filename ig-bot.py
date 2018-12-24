@@ -72,8 +72,10 @@ class InstagramBot():
           except Exception as ex:
             time.sleep(1)
 
+from settings import USERNAME, PASSWORD
 
-bot = InstagramBot("<username>", "<password>")
+bot = InstagramBot(USERNAME, PASSWORD)
 bot.login()
-bot.like_pics(['<hashtag>', '<hashtag>', '<hashtag>', '<hashtag>'])
+# Put hashtags in the list below
+bot.like_pics(['<hashtag>', '<hashtag>'])
 bot.close_browser()
